@@ -1,14 +1,109 @@
+/* 기본 스타일 */
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+}
 /* 모바일 & 데스크탑 공통 */
+.appHeader {
+  background-color: skyblue;
+}
+.appNavigation {
+  background-color: orange;
+}
+.appMain {
+  background-color: lime;
+}
+.appFooter {
+  background-color: purple;
+}
+
+/* 공통 컨테이너 */
+.container {
+  background-color: silver;
+  display: flex;
+  flex-flow: row wrap;
+}
+.appMain {
+  display: flex;
+  flex-flow: row wrap;
+}
 body {
   background-color: skyblue;
 }
 @media screen and (max-width: 999px) {
-  body {
+  /* 모바일 컨테이너 */
+  .container {
     background-color: yellow;
+  }
+  .appHeader,
+  .appMain,
+  .appFooter {
+    width: 100%;
+  }
+  .appNavigation {
+    display: none;
+  }
+  .appHeader {
+    height: 15vh;
+  }
+  .appMain {
+    height: 70vh;
+  }
+  .book,
+  .news,
+  .board,
+  .twitter,
+  .favorite {
+    width: 100%;
+    height: 20%;
+  }
+  .appFooter {
+    height: 15vh;
   }
 }
 @media screen and (min-width: 1000px) {
-  body {
+  /* 데스크탑 컨테이너 */
+  .container {
     background-color: pink;
+    justify-content: center;
+  }
+  .appHeader,
+  .appMain {
+    width: 1000px;
+  }
+  .appNavigation,
+  .appFooter {
+    width: 100%;
+  }
+  .appHeader {
+    height: 10vh;
+  }
+  .appNavigation {
+    height: 20vh;
+  }
+  .appMain {
+    height: 60vh;
+    justify-content: space-between;
+  }
+  .book {
+    width: 320px;
+  }
+  .news {
+    width: 660px;
+  }
+  .board {
+    width: 320px;
+  }
+  .twitter {
+    width: 400px;
+  }
+  .favorite {
+    width: 240px;
+  }
+  .appFooter {
+    height: 10vh;
   }
 }
